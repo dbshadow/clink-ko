@@ -3,7 +3,7 @@
 #include <linux/netlink.h>
 #include <linux/skbuff.h>
 #include <linux/proc_fs.h>
-#include "cameo_ev.h"
+#include "clink_ev.h"
 
 #define PROC_CLINK	"clink"
 
