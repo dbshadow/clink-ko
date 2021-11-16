@@ -1,0 +1,33 @@
+menu "Configuration"
+	depends on PACKAGE_kmod-clink-ko
+	config UPDATE_WIFI_LED
+		bool "UPDATE_WIFI_LED"
+		help
+			wifi LED blink and on (ROUTER/AP mode)
+		default y
+
+        config UPDATE_RSSI_LED
+		depends on UPDATE_WIFI_LED
+                bool "UPDATE_RSSI_LED"
+                help
+                        config LED by rssi strength
+                default n
+
+	config HAVE_PHY_ETHERNET
+		bool "HAVE_PHY_ETHERNET"
+		help
+			Have physical ethernet port
+		default y
+	config POWER_SAVING
+		bool "POWER_SAVING"
+		help
+			Send magic packet to wake up device when client connect up
+		default n
+
+	config UPDATE_WAN_STATUS
+		bool "UPDATE_WAN_STATUS"
+		help
+			Update WAN status for WDC30
+		default n
+
+endmenu
